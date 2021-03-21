@@ -1,0 +1,11 @@
+@mixin a-none{
+  text-decoration: none;
+  color: #000 ;
+  
+}
+@mixin link-but{
+  border-width: 2px;
+  border-color: #000;
+  border-radius: 3px;
+  border: solid;
+}

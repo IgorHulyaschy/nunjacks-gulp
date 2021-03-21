@@ -1,0 +1,90 @@
+{%extends 'baseOfProfile.html'%}
+{% set title = 'Profile'%}
+{% set profile = 'activePage'%}
+{% set location = 'Profile'%}
+
+{%block profile%}
+<div class="wrap">
+  <div class="cont">
+    <nav class="info">
+      <a class="navProfile" href="#" id="settings1">Personal information</a>
+      <a class="navProfile" href="profileMore.html" >Account information</a>
+    </nav>
+    <div class="user-settings">
+      <section class="wrapper-user-photo">
+        <div class="avatar">
+          <img src="css/images/avatar.jpg" class="avatar-photo" alt="">
+        </div>
+        <a href="#"><i class="fas fa-pencil-alt"></i>Change photo</a>
+      </section>
+      <section class="wrapper-user-col1">
+        <div class="setting"><span>First name</span>
+          <input type="text" class="inputForSmthing">
+        </div>
+        <div class="setting"><span>Title</span>
+          <select class="select-list">
+            <option>Select title</option>
+            <option>Mr</option>
+            <option>Mrs</option>
+          </select>
+        </div>
+        <div class="setting"><span>Country</span>
+          <div class="select-box">
+            <div class="options-container">
+              <div class="option">
+                <input  type="radio" class="radio" id="ua" name="category"/>
+                <label class="flag" for="ua"><img src="css/images/flags/ukraine.png">&nbspUkraine</label>
+              </div>
+
+              <div class="option" >
+                <input type="radio" class="radio" id="rus" name="category" />
+                <label  class="flag" for="rus"><img src="css/images/flags/russia.png" alt="">&nbspRussia</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="usa" name="category" />
+                <label class="flag" for="usa"><img src="css/images/flags/usa.png" alt="">&nbspUSA</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="cnd" name="category" />
+                <label class="flag" for="cnd"><img src="css/images/flags/canada.png" alt="">&nbspCanada</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="blr" name="category" />
+                <label class="flag" for="blr"><img src="css/images/flags/belarus.png" alt="">&nbspBelarus</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="frc" name="category" />
+                <label for="frc"><img src="css/images/flags/france.png" alt="">&nbspFrance</label>
+              </div>
+            </div>
+
+            <div class="selected">
+              Select Country
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wrapper-user-col2">
+        <div class="setting"><span>Last name</span>
+          <input type="text" class="inputForSmthing">
+        </div>
+        
+        <div class="setting"><span>Company</span>
+          <input type="text" class="inputForSmthing">
+        </div>
+        <div class="setting"><span>Mobile phone</span>
+          <input type="text" class="inputForSmthing" id="output">
+        </div>
+      </section>
+    </div>
+    <script src="../scripts/select-list.js"></script>
+    <script src="../scripts/phone-operator.js"></script>
+    <script src="../scripts/avatarChange.js"></script>
+  </div>
+</div>
+
+{%endblock%}

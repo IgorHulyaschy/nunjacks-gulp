@@ -1,0 +1,61 @@
+@import "button";
+@import "href";
+@import "text";
+@import "image";
+
+.inputForSmthing{
+  @include white-field-text;
+  
+  width: 100%;
+  
+}
+.inputInRow{
+  @include white-field-text;
+  width: 40%;
+  
+}
+.inputInRow:focus,.inputForSmthing:focus{
+  border-left-color: rgb(162, 0, 255);
+  border-width: 4px;
+}
+.ButforAction{
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  border-radius: 5px;
+  border-color: rgb(162, 0, 255);
+  background-color: rgb(162, 0, 255);
+  color: white;
+  @include pointer;
+  
+}
+.ButforAction:hover{
+  font-weight:bold;
+  background-color:white;
+  color:rgb(162, 0, 255);
+}
+.ButforAction:active{
+  border-color: rgb(162, 0, 255);
+  background-color: rgb(162, 0, 255);
+  color: white;
+}
+a:hover{
+  font-weight:bold;
+}
+.navBut{
+  @include link-but;
+}
+.navBut:hover{
+  background-color: black;
+  color: white;
+  border-width: 0px;
+}
+.logo{
+  height:59px; 
+  width:150px;
+}
+.select-list{
+  @include select-list;
+}

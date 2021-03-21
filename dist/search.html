@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <script src="https://kit.fontawesome.com/4a93b75334.js" crossorigin="anonymous"></script>
+  <title>Search</title>
+</head>
+<body class="main-wrap">
+  <div class="container-profile">
+    <div class="wrapper-menu">
+      <img class="logo-small" src="css/images/logo-small2.png">
+      <nav class="menu">
+        <a href="search.html" ><i class="fas fa-search" id="activePage"></i></a>
+        <a href="profile.html"><i class="far fa-user" id=""></i></a>
+        <a href="#"> <i class="far fa-envelope" id=""></i></a>
+        <a href="#"><i class="fas fa-calendar-alt" id=""></i></a>
+      </nav>
+    </div>
+    
+    <div class="wrapper-content">
+      <header>
+        <span class="path">Home > Search</span>
+        <nav class="account-main">
+          Igor Hulyaschy 
+        </nav>
+      </header>
+      <section class="wrapper-profile-content">
+        <div class="profile-content">
+          
+              
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/lightpick@latest/css/lightpick.css">
+<div class="search-container">
+  <section class="filter">
+    <div class="settings"><span>Location</span>
+      <div class="select-box">
+        <div class="options-container">
+          <div class="option">
+            <input  type="radio" class="radio" id="ua" name="category"/>
+            <label class="flag" for="ua"><img src="css/images/flags/ukraine.png">&nbspUkraine</label>
+          </div>
+
+          <div class="option" >
+            <input type="radio" class="radio" id="rus" name="category" />
+            <label  class="flag" for="rus"><img src="css/images/flags/russia.png" alt="">&nbspRussia</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="usa" name="category" />
+            <label class="flag" for="usa"><img src="css/images/flags/usa.png" alt="">&nbspUSA</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="cnd" name="category" />
+            <label class="flag" for="cnd"><img src="css/images/flags/canada.png" alt="">&nbspCanada</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="blr" name="category" />
+            <label class="flag" for="blr"><img src="css/images/flags/belarus.png" alt="">&nbspBelarus</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="frc" name="category" />
+            <label for="frc"><img src="css/images/flags/france.png" alt="">&nbspFrance</label>
+          </div>
+        </div>
+
+        <div class="selected">
+          Select Country
+        </div>
+    </div>
+    
+    <div class="settings"><span>Search</span>
+      <input type="text" class="inputForSmthing" placeholder="Type your query...">
+    </div>
+    
+    <div class="settings"><span>Category</span>
+      <input type="text" class="inputForSmthing">
+    </div>
+    
+    <div class="settings"><span>Service</span>
+      <input type="text" class="inputForSmthing">
+    </div>
+    
+    <div class="settings"><span>Period</span>
+      <input type="text" id="demo-2" class="inputForSmthing"/>
+    </div>
+    <input type="button" value="Search" class="ButforAction"/>
+  </section>
+  <section class="result">
+    <div class="moreFilters">
+
+    </div>
+    <div class="finalResults">
+
+    </div>
+  </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js" defer></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/lightpick@latest/lightpick.js"></script>
+
+<script>
+  var picker = new Lightpick({ field: document.getElementById('demo-2') });
+</script>
+<script>
+    var picker = new Lightpick({
+    field: document.getElementById('demo-2'),
+    singleDate: false,
+    onSelect: function(start, end){
+        var str = '';
+        str += start ? start.format('Do MMMM YYYY') + ' to ' : '';
+        str += end ? end.format('Do MMMM YYYY') : '...';
+        document.getElementById('result-2').innerHTML = str;
+    }
+});
+
+</script>
+<script src="../scripts/select-list.js"></script>
+
+
+
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

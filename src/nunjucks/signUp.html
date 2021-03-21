@@ -1,0 +1,29 @@
+{% set title = 'Sign up' %}
+{% extends 'base.html' %}
+{% block content %}
+<header>
+  <img class="logo" src="css/images/logo.svg">
+  <nav>Already have an acoount?
+    <a href="index.html" class="navBut">Log in</a>
+  </nav>
+</header>
+<div class="content">
+  <section class="wrapper">
+    <form>
+      <span>Sign up</span>
+      <section class="name-lastName">
+        <input type="text" placeholder="Name" class="inputInRow">
+        <input type="text" placeholder="Last Name" class="inputInRow">
+      </section>
+      <section class="login-password">      
+        <input type="text" placeholder="Login" class="inputForSmthing">
+        <input type="password" placeholder="Password" class="inputForSmthing">
+      </section>
+      <input type="button" value="Sign up" class="ButforAction">
+      <nav class="smallScreen">Already have an acoount?
+        <a href="index.html" class="navBut">Log in</a>
+      </nav>
+    </form>
+  </section>
+</div>
+{%endblock%}

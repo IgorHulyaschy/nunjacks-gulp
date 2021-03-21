@@ -1,0 +1,22 @@
+{% set title = 'Reset Password' %}
+{% extends 'base.html' %}
+{% block content %}
+<header>
+      
+  <img class="logo" src="css/images/logo.svg">
+
+<nav>Do not have an account?
+  <a href="signUp.html" class="navBut">Sign up</a>
+</nav>
+</header>
+<div class="content">
+<section class="wrapper">
+  <form>
+    <span>Reset your password</span>
+    <input type="password" placeholder="New password" class="inputForSmthing">
+    <input type="password" placeholder="Confirm password" class="inputForSmthing">
+    <input type="button" value="Reset" class="ButforAction">
+  </form>
+</section>
+</div>
+{%endblock%}

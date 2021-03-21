@@ -1,0 +1,509 @@
+@import "mixins";
+@import "variables";
+@import "forms/stylesOfInput";
+
+*{
+  font-family: $font-family;
+  font-size: $font-size;
+}
+body{
+  background-color: rgb(241, 241, 241);
+}
+a{
+  @include a-none;
+}
+.container{
+  @include bp-576;
+  display: flex;
+  flex-direction: column;
+  header{
+    @include f-row-b();
+    
+    img{
+      margin-left: 10px;
+    }
+    nav{
+      @include margin;
+      margin-right: 10px;
+    }
+  }
+  .wrapper-for-gradient{
+    
+    display: flex;
+    justify-content: center;
+    @include margin;
+    .gradient{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      @include gradient;
+      .mail-img{
+        width: 40%;
+        height: 40%;
+      }
+      .capital-font{
+        @include capital-text;
+        @include margin;
+      }
+
+    }
+  }
+  .content{
+    @include f-j-center;
+    @include margin;
+    
+    .wrapper{
+      @include f-a-center-j-around;
+      @include margin;
+      background-color: white;
+      form{
+        width: 60%;
+        @include f-d-column-ai-center-jc-center;
+        @include margin;
+        span{
+          @include f-as-start;
+          color: rgb(0, 0, 0);
+          font-size: 32px;
+        }
+        input[type="text"]{
+          @include margin;
+        }
+        input[type="password"]{
+          @include margin;
+        }
+        input[type="button"]{
+          @include f-as-end;
+          @include margin;
+        }
+        a{
+          @include f-as-end;
+          @include margin;
+        }
+
+        .name-lastName{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;  
+        }
+        .login-password{
+          width: 100%;
+          display: flex;
+          flex-direction: column;  
+        }
+        .smallScreen{
+          display: none;
+        }
+        .wrapper-checkbox{
+          width: 100%;
+          .wrapper-line{
+            a{
+              color: rgb(0, 0, 197);
+              margin-top: 0;
+            }
+            @include margin;
+            display: flex;
+            flex-direction: row;
+          }
+
+        }
+        .g-recaptcha{
+          @include margin;
+          display: flex;
+          align-self: flex-start;
+        }
+      }
+    }   
+  }
+}
+.main-wrap{
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  .container-profile{
+    display: flex;
+    flex-direction: row;
+    .wrapper-menu{
+      display: flex;
+      flex-direction: column;
+      width: 90px;
+      height: 100vh;
+      background-color: black;
+      .logo-small{
+        @include margin;
+        width: 90px;
+        height: 75px;
+      }
+      .menu{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        width: 100%;
+        @include margin;
+        i{
+          @include margin;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          color: grey;
+          font-size: 35px;
+        }
+        i:hover{
+          color: white;
+        }
+        i:active{
+          color: white;
+          border-left: solid white 4px;
+        }
+        #activePage{
+          color: white;
+          border-left: solid white 4px;
+        }
+        
+      }
+    }
+    .wrapper-content{
+      width: 95vw;
+      height: 100vh;
+      background-color: rgb(241, 241, 241);
+      header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        border-bottom: solid 1px rgb(212, 212, 212);
+        background-color: rgb(255, 255, 255);
+        border-bottom-right-radius: 5px;
+        .path, .account-main{
+          padding: 10px;
+        }
+      }
+      .wrapper-profile-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .profile-content{
+          @include margin;
+          width: 90%;
+          height: 80vh;
+          background-color: white;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          overflow: auto;
+          .search-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .filter{
+              width: 20%;
+              height: 90%;
+              border-right: solid 1px rgb(212, 212, 212);
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              .settings{
+                width: 85%;
+                @include setting;
+                box-sizing: border-box;
+                .inputForSmthing{
+                  width: 100%;
+                  box-sizing: border-box;
+                }
+                .select-box {
+                  display: flex;
+                  width: 100%;
+                  flex-direction: column;
+                }
+                
+                .select-box .options-container {
+                  max-height: 0;
+                  width: 100%;
+                  opacity: 0;
+                  transition: all 0.4s;
+                  overflow: hidden;
+                  padding:10px;
+                  border:0;
+                  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+                  order: 1;
+                  box-sizing: border-box;
+                }
+                
+                .selected {
+                  margin-bottom: 8px;
+                  position: relative;
+                  padding:10px;
+                  border:0;
+                  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+                  order: 0;
+                  height: 16px;
+                  font-size: $font-size;
+                  display: flex;
+                  align-items: center;
+                  
+                }
+                
+                .selected::after {
+                  content: "";
+                  background: url("images/arrow-down2.svg");
+                  background-size: 15px;
+                  background-repeat: no-repeat;
+                  position: absolute;
+                  height: 16px;
+                  width: 16px;
+                  right: 5px;
+                  top: 11px;
+                  transition: all 0.4s;
+                }
+                
+                .select-box .options-container.active {
+                  max-height: 240px;
+                  opacity: 1;
+                  overflow-y: scroll;
+                }
+                
+                .select-box .options-container.active + .selected::after {
+                  transform: rotateX(180deg);
+                }
+                
+                .select-box .options-container::-webkit-scrollbar {
+                  width: 8px;
+                  background: #b3b3b3;
+                
+                }
+                
+                .select-box .options-container::-webkit-scrollbar-thumb {
+                  background: #525861;
+                  border-radius: 8px;
+                }
+                
+                .select-box .option,
+                .selected {
+                  cursor: pointer;
+                }
+                
+                .select-box .option:hover {
+                  background: #d6d6d6;
+                }
+                
+                .select-box label {
+                  cursor: pointer;
+                }
+                
+                .select-box .option .radio {
+                  display: none;
+                }
+              }
+              .ButforAction{
+                @include margin;
+                width: 85%;
+                box-sizing: border-box;
+              }
+            }
+            .result{
+              width: 80%;
+              height: 90%;
+
+            }
+          }
+          .wrap{
+            width: 70%;
+            .cont{
+              width: 70%;
+              .info{
+                display: flex;
+                flex-direction: row;
+                #settings1{
+                  font-weight: bold;
+                  color: rgb(17, 153, 69);
+                  border-bottom-color: rgb(18, 218, 94);
+                }
+                .navProfile{
+                  color: rgb(212, 212, 212);
+                  display: flex;
+                  justify-content: center;
+                  font-size: 28px;
+                  @include margin;
+                  width: 50%;
+                  border-bottom: solid rgb(212, 212, 212) 2px;
+                }
+              }
+              .wrap-cont{
+                display: flex;
+                flex-direction: row;
+                div{
+                  display: flex;
+                  flex-direction: column;
+                  margin-right: 40px;
+                  span{
+                    margin-top: 40px;
+                    color:rgb(182, 182, 182);
+                  }
+                  
+                }
+              }
+              .resetpass{
+                width: 60%;
+                @include margin;
+                display: flex;
+                justify-content: flex-end;
+                a{
+                  color:rgb(17, 153, 69);
+                }
+              }
+              .user-settings{
+                @include margin;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 95%;
+                .wrapper-user-photo{
+                  width: 20%;
+                  @include margin;
+                  .avatar{
+                    @include margin;
+                    width: 100%;
+
+                    .avatar-photo{
+                      @include margin;
+                      width: 100%;
+                      border-radius: 50%;
+                    }    
+                  }
+                  a{
+                    color: rgb(17, 153, 69);
+                  }
+                }
+                .wrapper-user-col1{
+                  width: 30%;
+                  @include margin;
+                  .inputForSmthing{
+                    
+                  }
+                  .setting{
+                    @include setting;   
+                    .select-box {
+                      display: flex;
+                      width: 100%;
+                      flex-direction: column;
+                    }
+                    
+                    .select-box .options-container {
+                      max-height: 0;
+                      width: 100%;
+                      opacity: 0;
+                      transition: all 0.4s;
+                      overflow: hidden;
+                      padding:10px;
+                      border:0;
+                      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+                      order: 1;
+                    }
+                    
+                    .selected {
+                      margin-bottom: 8px;
+                      position: relative;
+                      padding:10px;
+                      border:0;
+                      box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+                      order: 0;
+                      height: 16px;
+                      font-size: $font-size;
+                      display: flex;
+                      align-items: center;
+                    }
+                    
+                    .selected::after {
+                      content: "";
+                      background: url("images/arrow-down2.svg");
+                      background-size: 15px;
+                      background-repeat: no-repeat;
+                      position: absolute;
+                      height: 16px;
+                      width: 16px;
+                      right: 5px;
+                      top: 11px;
+                      transition: all 0.4s;
+                    }
+                    
+                    .select-box .options-container.active {
+                      max-height: 240px;
+                      opacity: 1;
+                      overflow-y: scroll;
+                    }
+                    
+                    .select-box .options-container.active + .selected::after {
+                      transform: rotateX(180deg);
+                    }
+                    
+                    .select-box .options-container::-webkit-scrollbar {
+                      width: 8px;
+                      background: #b3b3b3;
+                    
+                    }
+                    
+                    .select-box .options-container::-webkit-scrollbar-thumb {
+                      background: #525861;
+                      border-radius: 8px;
+                    }
+                    
+                    .select-box .option,
+                    .selected {
+                      cursor: pointer;
+                    }
+                    
+                    .select-box .option:hover {
+                      background: #d6d6d6;
+                    }
+                    
+                    .select-box label {
+                      cursor: pointer;
+                    }
+                    
+                    .select-box .option .radio {
+                      display: none;
+                    }
+                    
+                  }
+                }
+                .wrapper-user-col2{
+                  width: 30%;
+                  @include margin;
+                  .inputForSmthing{
+                    
+                  }
+                  .setting{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    span{
+                      @include margin;
+                      color: rgb(182, 182, 182);
+                    }
+                    
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.wrapper{
+  width: 632px;
+  height: 500px;
+  border-width: 1px;
+  border-color: rgb(112, 112, 112);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+

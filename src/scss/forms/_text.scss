@@ -1,0 +1,22 @@
+input[type="text"], input[type="password"],input[type="button"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+
+
+}
+
+@mixin white-field-text{
+  
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-left: 4px solid transparent;
+}
+@mixin select-list {
+  padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}

@@ -1,0 +1,23 @@
+{% set title = 'Sign in' %}
+{% extends 'base.html' %}
+{% block content %}
+<header>
+      
+  <img class="logo" src="css/images/logo.svg">
+
+<nav>Do not have an account?
+  <a href="signUp.html" class="navBut">Sign up</a>
+</nav>
+</header>
+<div class="content">
+<section class="wrapper">
+  <form>
+    <span>Sign in</span>
+    <input type="text" placeholder="Login" class="inputForSmthing">
+    <input type="password" placeholder="Password" class="inputForSmthing">
+    <a href="pass-recovery.html">Forgot password?</a>
+    <input type="button" value="Sign in" class="ButforAction">
+  </form>
+</section>
+</div>
+{% endblock %}
